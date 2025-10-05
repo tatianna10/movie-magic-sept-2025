@@ -22,15 +22,15 @@ SoftUni JS Back-End Course Project
 - [ x ] Show no movies screen
 ---
 ### Create Movie
-- [   ] Add Movie Controller
-- [   ] Show create movie page
-- [   ] Add routes 
-- [   ] Read body data
-- [   ] Create a movie
-  - [   ] Add action
-  - [   ] Add service
-  - [   ] Add model method for creating movie
+- [ x ] Add Movie Controller
+- [ x ] Show create movie page
+- [  ] Add routes 
+- [  ] Read body data
+- [  ] Create a movie
+  - [  ] Add action
+  - [  ] Add service
+  - [  ] Add model method for creating movie
 
 
 
-- [   ] Add 404 page
+- [  ] Add 404 page
