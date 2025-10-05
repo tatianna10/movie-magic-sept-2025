@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "SoftUni JS Back-End Course Project",
   "main": "index.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "start": "node src/index.js",
     "dev": "node --watch src/index.js"
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/tatianna10/movie-magic-sept-2025/issues"
   },
-  "homepage": "https://github.com/tatianna10/movie-magic-sept-2025#readme"
+  "homepage": "https://github.com/tatianna10/movie-magic-sept-2025#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
