@@ -47,7 +47,7 @@ const movies = [
             }
         ]
     }
-];
+]
 
 export default class Movie {
     static find() {
