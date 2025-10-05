@@ -18,7 +18,7 @@ SoftUni JS Back-End Course Project
 - [ x ] Add home controller
 - [ x ] Add movie data layer
 - [ x ] Add movie service
-- [  ] Render movies on home page
+- [ x ] Render movies on home page
 - [  ] Show no movies screen
 ---
 - [  ] Add routes 
