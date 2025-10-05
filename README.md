@@ -3,10 +3,21 @@ SoftUni JS Back-End Course Project
 
 ## Development Steps
 
-- [x] Initialize Project
-- [x] Add Express Server  `npm i express`
-- [] Config debugging
-- [x] Add Workshop Resources
-- [x] Setup Handlebars `npm i express-handlebars`
-- [x] Setup static files
-- [x] Render Home Page
+### Setup
+- [ x ] Initialize Project
+- [ x ] Add Express Server  `npm i express`
+- [ x ] Config debugging
+- [ x ] Add Workshop Resources
+- [ x ] Setup Handlebars `npm i express-handlebars`
+- [ x ] Setup static files
+- [ x ]  Render Home Page
+- [ x ] Add Layout Page 
+- [ x ] Render About Page
+---
+### Architecture
+- [ x ] Add home controller
+- [  ] Add movie data layer
+- [  ] Add movie serviceRender movies on home page
+- [  ] Show no movies screen
+---
+- [  ] Add routes 
