@@ -14,8 +14,8 @@ app.set('view engine', 'hbs');
 app.set('views', 'src/views');
 
 //Setup middlewares
-app.use(express.static('src/public'));
-app.use(express.urlencoded()); 
+app.use(express.static('src/public')); //Setup static middleware
+app.use(express.urlencoded()); //Parse form data from request
 // Routes
 app.use(routes);
 
