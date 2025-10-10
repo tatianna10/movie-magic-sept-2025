@@ -53,8 +53,21 @@ export default class Movie {
         this._id = uuid();
     }
 
-    static find() {
-        return movies.slice();
+    static find(filter = {}) {   //return array
+        let result = movies.slice();
+        if (filter._id) {
+            result = movies.filter(movie => movie._id === filter._id);
+        }
+        return result;
+    }
+
+    static findOne(filter = {}) {  //return object
+        let result = movies[0];
+
+        if (filter._id) {
+            result = movies.find(movie => movie._id === filter._id);
+        }
+        return result;
     }
 
     get id() {
