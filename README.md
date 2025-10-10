@@ -31,7 +31,14 @@ SoftUni JS Back-End Course Project
   - [ x ] Add service
   - [ x ] Add model method for creating movie
 - [ x ] Redirect after creation
-
+- [ x ] Add unique id for each created movie
+---
+### Details
+---
+### Search
+---
+### Bonuses
+- [  ] File persistance
 
 
 - [  ] Add 404 page
