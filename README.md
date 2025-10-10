@@ -30,7 +30,7 @@ SoftUni JS Back-End Course Project
   - [ x ] Add action
   - [ x ] Add service
   - [ x ] Add model method for creating movie
-- [  ] Redirect after creation
+- [ x ] Redirect after creation
 
 
 

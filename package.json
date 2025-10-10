@@ -21,6 +21,7 @@
   "homepage": "https://github.com/tatianna10/movie-magic-sept-2025#readme",
   "dependencies": {
     "express": "^5.1.0",
-    "express-handlebars": "^8.0.2"
+    "express-handlebars": "^8.0.2",
+    "uuid": "^13.0.0"
   }
 }
