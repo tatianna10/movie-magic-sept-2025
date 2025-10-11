@@ -58,18 +58,32 @@ export default class Movie {
         if (filter._id) {
             result = movies.filter(movie => movie._id === filter._id);
         }
+
         if (filter.title) {
-            //TODO Search by title, partial match, case insensitive
+            // Get the normalized search term once (lowercase and trimmed)   //TODO Search by title, partial match, case insensitive
+            const searchTitle = filter.title.toLowerCase().trim();
+            result = result.filter(movie =>
+                movie.title.toLowerCase().trim().includes(searchTitle)
+            );
         }
 
         if (filter.genre) {
             //TODO Search by genre, exact match, cane insensitive
-            result = result.filter(movie => movie.genre.toLowerCase() === filter.genre.toLowerCase());
+            if (filter.genre) {
+                const searchGenre = filter.genre.toLowerCase().trim();
+                result = result.filter(movie =>
+                    movie.genre.toLowerCase() === searchGenre
+                );
+            }
         }
 
         if (filter.year) {
             //TODO Search by year, exact match
-            result = result.filter(movie => movie.year === filter.year);
+            if (filter.year) {
+                const searchYear = filter.year.trim(); // Trim the search year input
+                result = result.filter(movie => movie.year === searchYear);
+            }
+
 
         }
         return result;
