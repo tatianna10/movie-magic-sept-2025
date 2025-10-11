@@ -7,7 +7,9 @@ export default {
     getOne(movieID) {
         return Movie.findOne({ _id: movieID });
     },
-    create(movieData) {
+    async create(movieData) {
+        movieData.rating = Number(movieData.rating);
+
         const movie = new Movie(movieData);
 
         return movie.save();

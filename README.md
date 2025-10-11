@@ -53,7 +53,7 @@ SoftUni JS Back-End Course Project
 - [ x ] Remember search words
 ### Bonuses
 - [ x ] Dynamic page title
-- [  ] Rating
+- [ x ] Rating (temp solution)
 - [  ] File persistance
 
 

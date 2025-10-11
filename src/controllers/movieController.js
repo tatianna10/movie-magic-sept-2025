@@ -7,16 +7,18 @@ movieController.get('/create', (req, res) => {
     res.render('create');
 });
 
-movieController.post('/create', (req, res) => {
+movieController.post('/create', async (req, res) => {
     const movieData = req.body;
-    movieService.create(movieData);
+    await movieService.create(movieData);
 
     res.redirect('/');
 });
 
-movieController.get('/:movieID/details', (req, res) => {
-    const movieId = req.params.movieID;
-    const movie = movieService.getOne(movieId);
+
+movieController.get('/:movieId/details', async (req, res) => {
+
+    const movieId = req.params.movieId;
+    const movie = await movieService.getOne(movieId);
 
     //TODO Prepare view data  (temp solution)
     const ratingViewData = '&#x2605;'.repeat(Math.trunc(movie.rating));  //or Math.floor can be used
@@ -25,10 +27,10 @@ movieController.get('/:movieID/details', (req, res) => {
 
 });
 
-movieController.get('/search', (req, res) => {
+movieController.get('/search', async (req, res) => {
     const filter = req.query;
 
-    const movies = movieService.getAll(filter);
+    const movies = await movieService.getAll(filter);
 
     res.render('search', { movies, filter, pageTitle: 'Search Movies' });
 });
