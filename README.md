@@ -44,9 +44,12 @@ SoftUni JS Back-End Course Project
 ### Search
 ---
 - [ x ] Show static search page
-- [  ] Render all movies
-- [  ] Modify search form
+- [ x ] Render all movies
+- [ x ] Modify search form
 - [  ] Filter movies
+   - [  ] Filter by title
+   - [  ] Filter by genre
+   - [ x ] Filter by year
 - [  ] Remember search words
 ### Bonuses
 - [  ] File persistance
