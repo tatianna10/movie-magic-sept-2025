@@ -52,9 +52,9 @@ SoftUni JS Back-End Course Project
    - [ x ] Filter by year
 - [ x ] Remember search words
 ### Bonuses
-- [  ] Dynamic page title
-- [  ] File persistance
+- [ x ] Dynamic page title
 - [  ] Rating
+- [  ] File persistance
 
 
 

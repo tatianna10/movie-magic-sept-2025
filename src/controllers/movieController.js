@@ -18,7 +18,10 @@ movieController.get('/:movieID/details', (req, res) => {
     const movieId = req.params.movieID;
     const movie = movieService.getOne(movieId);
 
-    res.render('details', { movie });
+    //TODO Prepare view data  (temp solution)
+    const ratingViewData = '&#x2605;'.repeat(Math.trunc(movie.rating));  //or Math.floor can be used
+
+    res.render('details', { movie, rating: ratingViewData });
 
 });
 
