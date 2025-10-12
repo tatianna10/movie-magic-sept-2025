@@ -54,7 +54,7 @@ SoftUni JS Back-End Course Project
 ### Bonuses
 - [ x ] Dynamic page title
 - [ x ] Rating (temp solution)
-- [ x ] File persistance
+- [ x ] File persistence
 ---
 ## Development Steps 2 - MongoDB Database
 ---
@@ -71,7 +71,7 @@ SoftUni JS Back-End Course Project
 - [ x ] Add movie model
    - [ x ] Create movie schema
    - [ x ] Create movie model
-- Refactor movie service
+- [ x ] Import movies to datanse
 
 
 
