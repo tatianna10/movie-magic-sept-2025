@@ -1,8 +1,8 @@
 # movie-magic-sept-2025
 SoftUni JS Back-End Course Project
 
-## Development Steps
-
+## Development Steps 1 - Express and Templating
+---
 ### Setup
 - [ x ] Initialize Project
 - [ x ] Add Express Server  `npm i express`
@@ -42,7 +42,6 @@ SoftUni JS Back-End Course Project
 - [ x ] Render details page with dynamic data
 ---
 ### Search
----
 - [ x ] Show static search page
 - [ x ] Render all movies
 - [ x ] Modify search form
@@ -51,10 +50,32 @@ SoftUni JS Back-End Course Project
    - [ x ] Filter by genre
    - [ x ] Filter by year
 - [ x ] Remember search words
+---
 ### Bonuses
 - [ x ] Dynamic page title
 - [ x ] Rating (temp solution)
 - [ x ] File persistance
+---
+## Development Steps 2 - MongoDB Database
+---
+### Prerequisites
+- [  ] Install MongoDB Community Server
+- [  ] Install Compass GUI
+- [  ] Install Mongosf GLI (Optional)
+---
+### Setup Database
+- [ x ] Insert mongoose `npm i mongoose`
+- [ x ] Connect to DB 
+---
+### Refactor Movies to use mongoose
+- [ x ] Add movie model
+   - [ x ] Create movie schema
+   - [ x ] Create movie model
+- Refactor movie service
 
 
+
+### Bonuses
+- [  ] Env variables
+- [  ] 
 
