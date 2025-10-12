@@ -14,10 +14,9 @@ movieController.post('/create', async (req, res) => {
     res.redirect('/');
 });
 
-
-movieController.get('/:movieId/details', async (req, res) => {
-
-    const movieId = req.params.movieId;
+movieController.get('/:movieID/details', async (req, res) => {
+    
+    const movieId = req.params.movieID;
     const movie = await movieService.getOne(movieId);
 
     //TODO Prepare view data  (temp solution)
