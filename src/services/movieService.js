@@ -15,14 +15,14 @@ export default {
         }
 
         if (filter.genre) {
-            // 1. Премахваме излишните интервали от търсената стойност
+            // 1. Remove excess spaces from the search value
             const searchGenre = String(filter.genre).trim();
-            // 2. Създаваме регулярен израз за точно съвпадение, без чувствителност към регистъра (i)
-            // ^ - Начало на стринга
-            // $ - Край на стринга
-            // Това гарантира, че "Act" няма да съвпадне с "Action"
+            // 2.We create a regular expression for exact matching, without case sensitivity (i)
+            // ^ - Start of string
+            // $ - End of string
+            // This ensures that "Act" will not match "Action"
             const regex = new RegExp(`^${searchGenre}$`, 'i');
-            // 3. Прилагаме филтъра към Mongoose заявката
+            // 3. We apply the filter to the Mongoose query
             query = query.where('genre').regex(regex);
         }
 

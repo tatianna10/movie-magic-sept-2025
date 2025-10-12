@@ -59,9 +59,9 @@ SoftUni JS Back-End Course Project
 ## Development Steps 2 - MongoDB Database
 ---
 ### Prerequisites
-- [  ] Install MongoDB Community Server
-- [  ] Install Compass GUI
-- [  ] Install Mongosf GLI (Optional)
+- [ x ] Install MongoDB Community Server
+- [ x ] Install Compass GUI
+- [ x ] Install Mongosf GLI (Optional)
 ---
 ### Setup Database
 - [ x ] Insert mongoose `npm i mongoose`
@@ -74,6 +74,11 @@ SoftUni JS Back-End Course Project
 - [ x ] Import movies to datanse
 - [ x ] Fix own property handlebars problem with lean method
 - [ x ] General fix for own property problem
+- [ x ] Refactor details
+- [ x ] Refactor create
+- [ x ] Refactor search
+---
+###
 
 
 
