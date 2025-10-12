@@ -78,10 +78,17 @@ SoftUni JS Back-End Course Project
 - [ x ] Refactor create
 - [ x ] Refactor search
 ---
-###
-
-
-
+### Add Cast
+- [  ] Add resourses
+- [  ] Add case model
+- [  ] Create Cast Service
+- [  ] Create Cast Controller
+---
+### Attach Cast to Movie
+- [  ]
+---
+### Show Cast on Details
+---
 ### Bonuses
 - [  ] Env variables
 - [  ] 

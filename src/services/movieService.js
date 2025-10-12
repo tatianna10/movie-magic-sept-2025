@@ -1,7 +1,7 @@
 import Movie from "../models/Movie.js";
 
 export default {
-    getAll(filter) {
+    getAll(filter = {}) {
         let query = Movie.find();
 
         if (filter.title) {
@@ -25,7 +25,6 @@ export default {
             // 3. We apply the filter to the Mongoose query
             query = query.where('genre').regex(regex);
         }
-
 
         if (filter.year) {
             // TODO Search by year, exact match, case senstive
