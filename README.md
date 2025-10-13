@@ -88,14 +88,16 @@ SoftUni JS Back-End Course Project
 --- 
 ### Attach Cast to Movie (relations)
 - [x] Add attach cast button
-- [] Add attach cast page
-- [] Add dynamic data to cast page
-- [] Add relation between cast and movie
+- [x] Add attach cast page
+- [x] Add dynamic data to cast page
+- [x] Show cast list in attach select
+- [x] Add relation between cast and movie
 - [] Attach cast functionality
 ---
 ### Show Cast on Details (population)
 ---
 ### Bonuses
+- [] Filter casts if they are already attached
 - [] Env variables
 - [] Name in movie
 - [] Back reference from vscode
