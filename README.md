@@ -83,16 +83,16 @@ SoftUni JS Back-End Course Project
 - [x] Create Cast Controller
 - [x] Create Cast Page
 - [x] Add Cast model
-- [ ] Create Cast Service
-- [ ] Create Cast Functionality
+- [x] Create Cast Service
+- [] Create Cast Functionality
 ---
 ### Attach Cast to Movie
-- [ ]
+- []
 ---
 ### Show Cast on Details
 ---
 ### Bonuses
-- [ ] Env variables
-- [ ] name in movie
-- [ ] Add movie views to a folder
+- [] Env variables
+- [] name in movie
+- [] Add movie views to a folder
 
