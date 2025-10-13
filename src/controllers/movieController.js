@@ -9,14 +9,14 @@ movieController.get('/create', (req, res) => {
 
 movieController.post('/create', async (req, res) => {
     const movieData = req.body;
-    
+
     await movieService.create(movieData);
 
     res.redirect('/');
 });
 
 movieController.get('/:movieID/details', async (req, res) => {
-    
+
     const movieId = req.params.movieID;
     const movie = await movieService.getOne(movieId);
 
@@ -33,6 +33,10 @@ movieController.get('/search', async (req, res) => {
     const movies = await movieService.getAll(filter);
 
     res.render('search', { movies, filter, pageTitle: 'Search Movies' });
+});
+
+movieController.get('/:movieId/attach', (req, res) => {
+    res.render('casts/attach');
 });
 
 export default movieController;
