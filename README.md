@@ -83,6 +83,7 @@ SoftUni JS Back-End Course Project
 - [  ] Add case model
 - [  ] Create Cast Service
 - [  ] Create Cast Controller
+- [  ] Create Cast Page
 ---
 ### Attach Cast to Movie
 - [  ]
