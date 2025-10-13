@@ -36,6 +36,9 @@ export default {
     getOne(movieID) {
         return Movie.findById(movieID);
     },
+    getOneDetailed(movieId) {
+        return this.getOne(movieId).populate('casts');
+    },
     async create(movieData) {
         movieData.rating = Number(movieData.rating);
 

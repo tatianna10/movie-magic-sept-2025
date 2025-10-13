@@ -96,6 +96,8 @@ SoftUni JS Back-End Course Project
 ---
 ### Show Cast on Details (population)
 - [x] Get movie casts filter
+- [x] Show casts on details
+- [x] Get movie casts using population
 ---
 ### Bonuses
 - [] Filter casts if they are already attached
