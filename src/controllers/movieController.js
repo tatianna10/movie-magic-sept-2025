@@ -20,7 +20,10 @@ movieController.get('/:movieID/details', async (req, res) => {
 
     const movieId = req.params.movieID;
     const movie = await movieService.getOne(movieId);
+    const movieCast = await castService.getAll({ includes: movie.casts });
 
+    console.log(movieCast);
+    
     //TODO Prepare view data  (temp solution)
     const ratingViewData = '&#x2605;'.repeat(Math.trunc(movie.rating));  //or Math.floor can be used
 
