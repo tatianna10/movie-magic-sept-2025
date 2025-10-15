@@ -71,7 +71,7 @@ SoftUni JS Back-End Course Project
 - [x] Add movie model
    - [x] Create movie schema
    - [x] Create movie model
-- [x] Import movies to datanse
+- [x] Import movies to datanse  !DON'T IMPORT IDs
 - [x] Fix own property handlebars problem with lean method
 - [x] General fix for own property problem
 - [x] Refactor details
@@ -105,4 +105,12 @@ SoftUni JS Back-End Course Project
 - [] Name in movie
 - [] Back reference from vscode
 - [] Add movie views to a folder
-
+---
+## Development Steps 3 - Session and Authentication
+---
+### Initial Setup
+- [x] Add resourses
+- []
+---
+### Registration
+- []
