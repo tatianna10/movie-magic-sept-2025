@@ -110,7 +110,14 @@ SoftUni JS Back-End Course Project
 ---
 ### Initial Setup
 - [x] Add resourses
-- []
 ---
 ### Registration
-- []
+- [] Add new controller `authController`
+- [] Add registration page
+- [] Add User model
+- [] Add User service
+- [] Handle registration (create user in database)
+- [] Add password hashing
+---
+### Login
+
