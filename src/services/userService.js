@@ -1,6 +1,9 @@
 import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
 
 import User from "../models/User.js";
+
+const JWT_SECRET = '560b8c4d6c21bdfbe283950c2614033e';
 
 export default {
     register(userData) {
@@ -11,14 +14,23 @@ export default {
         const user = await User.findOne({ email });
 
         if (!user) {
-            throw new Error('Invalid user!');
+            throw new Error('Invalid user or password!');
         }
 
         //validate password
         const isValid = await bcrypt.compare(password, user.password);
 
         if (!isValid) {
-            throw new Error('Invalid password!');
+            throw new Error('Invalid password or password!');
         }
+
+        //Create token
+        const payload = {
+            id: user.id,
+            email: user.email,
+        };
+
+        const token = jwt.sign(payload, JWT_SECRET, { expiresIn: '2h' });
+        return token;
     }
 };
