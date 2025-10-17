@@ -1,5 +1,5 @@
 import { Router } from "express";
-import userService from "../services/userService.js";
+import authService from "../services/authService.js";
 
 const authController = Router();
 
@@ -10,7 +10,7 @@ authController.get('/register', (req, res) => {
 authController.post('/register', async (req, res) => {
     const userData = req.body;
 
-    await userService.register(userData);
+    await authService.register(userData);
 
     res.redirect('/auth/login');
 });
@@ -22,7 +22,7 @@ authController.get('/login', (req, res) => {
 authController.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
-    const token = await userService.login(email, password);
+    const token = await authService.login(email, password);
 
     //Attache token to cookie
     res.cookie('auth', token); //cookie name is auth, to it will be attached a token
@@ -33,6 +33,9 @@ authController.post('/login', async (req, res) => {
 authController.get('/logout', (req, res) => {
     //Clear auth cookie
    res.clearCookie('auth');
+
+   // BONUS: invalidate JWT token
+
 
     res.redirect('/');
 });

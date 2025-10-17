@@ -132,6 +132,9 @@ SoftUni JS Back-End Course Project
 - [x] Clear cookie
 ---
 ### Authorization
+- [] Add auth middleware
+- [] Validation user authentication
+- []
 ---
 ### Dynamic Navigation
 ---
@@ -142,4 +145,5 @@ SoftUni JS Back-End Course Project
 ### Bonus
 - [] Automatic login on register
 - [] Invalidate token logout
+- [] Refresh token
 
