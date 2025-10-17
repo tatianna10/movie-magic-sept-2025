@@ -125,5 +125,6 @@ SoftUni JS Back-End Course Project
   - [x] Validate user
   - [x] Validate password
   - [x] Create token
+  - [x] Return token to client
 
 
