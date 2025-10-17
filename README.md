@@ -120,4 +120,10 @@ SoftUni JS Back-End Course Project
 - [x] Add password hashing
 ---
 ### Login
+- [x] Add login page
+- [] Handle login page (post request for login)
+  - [x] Validate user
+  - [] Validate password
+  - [] Create token
+
 
