@@ -60,6 +60,9 @@ export default {
 
         //Attach relation method #2 MongoDB
         return Movie.findByIdAndUpdate(movieId, { $push: { casts: castId } });
+    },
+    delete(movieId) {
+        return Movie.findByIdAndDelete(movieId);
     }
 
 };
