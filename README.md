@@ -157,8 +157,8 @@ SoftUni JS Back-End Course Project
 - [x] Handle edit page
 ---
 ### Bonus
-- [] Automatic login on register
-- [] Edit categories
+- [x] Automatic login on register
+- [x] Edit categories
 - [] Invalidate token logout
 - [] Refresh token
 
