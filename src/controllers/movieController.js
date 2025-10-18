@@ -31,9 +31,9 @@ movieController.get('/:movieID/details', async (req, res) => {
     //TODO Prepare view data  (temp solution)
     const ratingViewData = '&#x2605;'.repeat(Math.trunc(movie.rating));  //or Math.floor can be used
 
-    const isCreator =
+    const isCreator = req.user?.id && movie.creator == req.user.id;
 
-        res.render('movies/details', { movie, rating: ratingViewData });
+    res.render('movies/details', { movie, rating: ratingViewData, isCreator });
 
 });
 
