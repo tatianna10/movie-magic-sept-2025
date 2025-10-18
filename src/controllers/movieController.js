@@ -2,6 +2,7 @@ import { Router } from "express";
 import movieService from "../services/movieService.js";
 import castService from "../services/castService.js";
 import { isAuth } from "../middlewares/authMiddleware.js";
+import { get } from "mongoose";
 
 const movieController = Router();
 
@@ -85,7 +86,11 @@ movieController.get('/:movieId/edit', async (req, res) => {
 
     const movie = await movieService.getOne(movieId);
 
-    res.render('movies/edit', { movie });
+    const categoriesViewData = getMovieCategoryViewData(movie.category);
+
+    console.log(categoriesViewData);
+
+    res.render('movies/edit', { movie, categories: categoriesViewData });
 });
 
 movieController.post('/:movieId/edit', async (req, res) => {
@@ -96,5 +101,20 @@ movieController.post('/:movieId/edit', async (req, res) => {
 
     res.redirect(`/movies/${movieId}/details`);
 });
+
+function getMovieCategoryViewData(selectedCategory) {
+    const categories = [
+        { value: 'tv-show', lable: 'TV Show' },
+        { value: 'animation', lable: 'Animation' },
+        { value: 'movie', lable: 'Movie' },
+        { value: 'documentary', lable: 'Documentary' },
+        { value: 'short-film', lable: 'Short-film' },
+
+    ];
+
+    const viewData = categories.map(category => ({ ...category, selected: selectedCategory === category.value ? 'selected' : '' }));
+
+    return viewData;
+}
 
 export default movieController;

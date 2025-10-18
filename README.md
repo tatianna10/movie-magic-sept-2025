@@ -104,7 +104,7 @@ SoftUni JS Back-End Course Project
 - [] Env variables
 - [] Name in movie
 - [] Back reference from vscode
-- [] Add movie views to a folder
+- [x] Add movie views to a folder
 ---
 ## Development Steps 3 - Session and Authentication
 ---
@@ -158,7 +158,7 @@ SoftUni JS Back-End Course Project
 ---
 ### Bonus
 - [] Automatic login on register
+- [] Edit categories
 - [] Invalidate token logout
 - [] Refresh token
-- [] Edit categories
 
