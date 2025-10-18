@@ -41,6 +41,7 @@ app.use(express.urlencoded()); //Parse form data from request
 // Cookie Parser
 app.use(cookieParser());
 
+//Use auth middleware
 app.use(authMiddleware);
 
 // Routes

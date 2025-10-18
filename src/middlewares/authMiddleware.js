@@ -11,7 +11,7 @@ export default function authMiddleware(req, res, next) {
 
     try {
         const decodedToken = jwt.verify(token, JWT_SECRET,);
-        
+
         //Attach authenticated user to request
         req.user = decodedToken;
         req.isAuthenticated = true;
@@ -26,4 +26,11 @@ export default function authMiddleware(req, res, next) {
         res.redirect('/auth/login');
 
     }
+}
+
+export function isAuth(req, res, next) {
+    if (!req.isAuthenticated) {
+        return res.redirect('/auth/login');
+    }
+    next();
 }
