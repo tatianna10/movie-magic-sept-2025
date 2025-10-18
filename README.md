@@ -142,7 +142,8 @@ SoftUni JS Back-End Course Project
 - [x] Add auth info to handlebars context
 ---
 ### Show creator control buttons
-- []
+- [] Add edit and delete buttons on delete page
+- [] Show buttons only for creators
 ---
 ### Delete Movies
 - []
