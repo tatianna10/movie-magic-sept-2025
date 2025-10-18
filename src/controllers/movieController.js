@@ -23,13 +23,14 @@ movieController.post('/create', isAuth, async (req, res) => {
     res.redirect('/');
 });
 
-movieController.get('/:movieID/details', async (req, res) => {
-    const movieId = req.params.movieID;
+movieController.get('/:movieId/details', async (req, res) => {
+    const movieId = req.params.movieId;
     const movie = await movieService.getOneDetailed(movieId);
 
 
     //TODO Prepare view data  (temp solution)
     const ratingViewData = '&#x2605;'.repeat(Math.trunc(movie.rating));  //or Math.floor can be used
+
 
     // const isCreator = req.user?.id && movie.creator == req.user.id;
     const isCreator = movie.creator && movie.creator.equals(req.user?.id);
@@ -61,15 +62,15 @@ movieController.post('/:movieId/attach', async (req, res) => {
 
     await movieService.attach(movieId, castId);
 
-    res.redirect(`movies/${movieId}/details`);
+    res.redirect(`/movies/${movieId}/details`);
 
 });
 
 movieController.get('/:movieId/delete', isAuth, async (req, res) => {
     const movieId = req.params.movieId;
 
-    const movie = await movieService.getOne(movieId);
     //TODO: Check if creator (since isAuth is only logged user but he could be not the creator)
+    const movie = await movieService.getOne(movieId);
     if (!movie.creator?.equals(req.user.id)) {
         return res.redirect('/');
     }
@@ -85,6 +86,15 @@ movieController.get('/:movieId/edit', async (req, res) => {
     const movie = await movieService.getOne(movieId);
 
     res.render('movies/edit', { movie });
+});
+
+movieController.post('/:movieId/edit', async (req, res) => {
+    const movieId = req.params.movieId;
+    const movieData = req.body;
+
+    await movieService.edit(movieId, movieData);
+
+    res.redirect(`/movies/${movieId}/details`);
 });
 
 export default movieController;

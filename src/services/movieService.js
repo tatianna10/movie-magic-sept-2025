@@ -33,8 +33,8 @@ export default {
 
         return query;
     },
-    getOne(movieID) {
-        return Movie.findById(movieID);
+    getOne(movieId) {
+        return Movie.findById(movieId);
     },
     getOneDetailed(movieId) {
         return this.getOne(movieId).populate('casts');
@@ -63,6 +63,9 @@ export default {
     },
     delete(movieId) {
         return Movie.findByIdAndDelete(movieId);
+    },
+    edit(movieId, movieData) {
+        return Movie.findByIdAndUpdate(movieId, movieData);
     }
 
 };
