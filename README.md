@@ -148,7 +148,8 @@ SoftUni JS Back-End Course Project
 - [x] Show buttons only for creators
 ---
 ### Delete Movies
-- []
+- [x] Add delete action
+- [x] Add creator validation
 ---
 ### Edit movies
 ---

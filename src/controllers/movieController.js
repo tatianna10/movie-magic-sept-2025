@@ -68,7 +68,11 @@ movieController.post('/:movieId/attach', async (req, res) => {
 movieController.get('/:movieId/delete', isAuth, async (req, res) => {
     const movieId = req.params.movieId;
 
-    //TODO: Check if creator
+    const movie = await movieService.getOne(movieId);
+    //TODO: Check if creator (since isAuth is only logged user but he could be not the creator)
+    if (!movie.creator?.equals(req.user.id)) {
+        return res.redirect('/');
+    }
 
     await movieService.delete(movieId);
 
