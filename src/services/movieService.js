@@ -39,14 +39,18 @@ export default {
     getOneDetailed(movieId) {
         return this.getOne(movieId).populate('casts');
     },
-    async create(movieData) {
-        movieData.rating = Number(movieData.rating);
+    create(movieData, userId) {
+        //movieData.rating = Number(movieData.rating);
 
         /* const movie = new Movie(movieData);
 
         return movie.save(); */
 
-        return Movie.create(movieData);
+        return Movie.create({
+            ...movieData,
+            rating: Number(movieData.rating),
+            creator: userId,
+        });
     },
     async attach(movieId, castId) {
         //Attach relation method #1
